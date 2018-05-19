@@ -30,11 +30,6 @@
         </div>
         <!--book edit form-->
         <div class="col-md-4" v-if="isEditing">
-          <div class="row">
-            <div class="col-md-12">
-              <button v-on:click="addBookForm()" class="btn btn-success btn-block text-center mb-2">Add New Book</button>
-            </div>
-          </div>
           <div class="card">
             <div class="card-header bg-primary text-white">
               Edit Book
@@ -53,7 +48,7 @@
                   <label for="edit_website">Website</label>
                   <input v-model="editBook.website" type="url" class="form-control" id="edit_website" name="edit_website" placeholder="Enter website" required>
                 </div>
-                <button type="reset" class="btn btn-danger">Reset</button>
+                <button v-on:click="addBookForm()" type="button" class="btn btn-danger">Cancel</button>
                 <button type="submit" class="btn btn-primary">Update Book</button>
               </form>
             </div>
