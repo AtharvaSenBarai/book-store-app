@@ -1,6 +1,7 @@
 # A Simple Book Store App
 
 This is a simple app for managing your book list.
+
 Features:
  - Can Add Books
  - Can Delete Books
