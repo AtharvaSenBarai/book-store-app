@@ -86,6 +86,7 @@ import FireBase from 'firebase'
 // import toastr
 import toastr from 'toastr'
 
+// firebase configuration
 let config = {
   apiKey: "AIzaSyBFz3hiFIVBJ1oXGUyJdC9Y3ItlUMKIgWI",
   authDomain: "book-store-62cb3.firebaseapp.com",
@@ -95,6 +96,7 @@ let config = {
   messagingSenderId: "252200862531"
 }
 
+// initializing firebase
 let app = FireBase.initializeApp(config)
 let db = app.database()
 let booksRef = db.ref('books')
@@ -115,11 +117,13 @@ export default {
     books: booksRef
   },
   methods: {
+    // adding book
     addBook: function () {
       booksRef.push(this.newBook)
       toastr.success('Book Added Successfully')
       this.newBook = {}
     },
+    // deleting book
     deleteBook: function (book) {
       booksRef.child(book['.key']).remove()
       toastr.success('Book Deleted Successfully')
