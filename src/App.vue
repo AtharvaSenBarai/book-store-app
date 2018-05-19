@@ -12,15 +12,15 @@
               <form v-on:submit.prevent="addBook()">
                 <div class="form-group">
                   <label for="title">Title</label>
-                  <input v-model="newBook.title" type="text" class="form-control" id="title" name="title" placeholder="Enter title">
+                  <input v-model="newBook.title" type="text" class="form-control" id="title" name="title" placeholder="Enter title" required>
                 </div>
                 <div class="form-group">
                   <label for="author">Author</label>
-                  <input v-model="newBook.author" type="text" class="form-control" id="author" name="author" placeholder="Enter author">
+                  <input v-model="newBook.author" type="text" class="form-control" id="author" name="author" placeholder="Enter author" required>
                 </div>
                 <div class="form-group">
                   <label for="website">Website</label>
-                  <input v-model="newBook.website" type="url" class="form-control" id="website" name="website" placeholder="Enter website">
+                  <input v-model="newBook.website" type="url" class="form-control" id="website" name="website" placeholder="Enter website" required>
                 </div>
                 <button type="reset" class="btn btn-danger">Reset</button>
                 <button type="submit" class="btn btn-primary">Add Book</button>
