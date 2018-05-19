@@ -177,7 +177,6 @@ export default {
         website: book.website,
       })
       toastr.success('Book Updated Successfully')
-      this.editBook = {}
       this.addBook = {}
     },
     // deleting book
